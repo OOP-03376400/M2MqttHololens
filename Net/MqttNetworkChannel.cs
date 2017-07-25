@@ -51,7 +51,9 @@ namespace M2Mqtt.Net
         private bool secure;
 
         // CA certificate (on client)
+#pragma warning disable 414
         private X509Certificate caCert;
+#pragma warning restore 414
         // Server certificate (on broker)
         private X509Certificate serverCert;
         // client certificate (on client)

@@ -14,6 +14,7 @@ Contributors:
    Paolo Patierno - initial API and implementation and/or initial documentation
 */
 
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -108,7 +109,9 @@ namespace M2Mqtt.Messages
             buffer = new byte[remainingLength];
 
             // read bytes from socket...
+#pragma warning disable 219
             int received = channel.Receive(buffer);
+#pragma warning restore 219
 
             if (protocolVersion == MqttMsgConnect.PROTOCOL_VERSION_V3_1)
             {

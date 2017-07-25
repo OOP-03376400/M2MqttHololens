@@ -51,7 +51,9 @@ namespace M2Mqtt.Messages
             }
 
             // get remaining length and allocate buffer
+#pragma warning disable 219
             int remainingLength = MqttMsgBase.decodeRemainingLength(channel);
+#pragma warning restore 219
             // NOTE : remainingLength must be 0
 
             return msg;

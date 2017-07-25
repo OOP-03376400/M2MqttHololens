@@ -51,8 +51,9 @@ namespace M2Mqtt.Messages
 
             // already know remaininglength is zero (MQTT specification),
             // so it isn't necessary to read other data from socket
+#pragma warning disable 219
             int remainingLength = MqttMsgBase.decodeRemainingLength(channel);
-
+#pragma warning restore 219
             return msg;
         }
 
